@@ -28,22 +28,49 @@ namespace FrogJumps
 
 				if(metersToJump>=5)
 				{
-					hopsCounts++;
-					restTimes+=2;
-					metersToJump-=5;
+					if(metersToJump==5)
+					{
+						hopsCounts++;
+						metersToJump-=5;
+					}
+					else
+					{
+						hopsCounts++;
+						restTimes+=2;
+						metersToJump-=5;
+					}
+					
 					
 					if(metersToJump>=3)
 					{
-						hopsCounts++;
-						restTimes+=3;
-						metersToJump-=3;	
+						if(metersToJump==3)
+						{
+							hopsCounts++;
+							metersToJump-=3;
+						}
+						else
+						{
+							hopsCounts++;
+							restTimes+=3;
+							metersToJump-=3;
+						}
+							
 					}
 					
 					if(metersToJump>=2)
 					{
-						hopsCounts++;
-						restTimes+=5;
-						metersToJump-=2;
+						if(metersToJump==2)
+						{
+							hopsCounts++;
+							metersToJump-=2;
+						}
+						else
+						{
+							hopsCounts++;
+							restTimes+=5;
+							metersToJump-=2;
+						}
+						
 					}
 							
 				}
